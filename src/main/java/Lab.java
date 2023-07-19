@@ -16,11 +16,13 @@ public class Lab {
      */
     public boolean login(String username, String password){
         boolean isAdmin = (username == "admin");
+        boolean isAdminPassword = (password == "qwerty");
         boolean isUser = (username == "user");
-        if (isAdmin && (password == "qwerty")){
+        boolean isUserPassword = (password == "password");
+        if (isAdmin && isAdminPassword){
             return true;
         }
-        if (isUser && (password == "password")){
+        if (isUser && isUserPassword){
             return true;
         }
         return false;
